@@ -1,0 +1,962 @@
+prompt,response
+"# Calculate the sum of the first 5 numbers
+sum = 0
+for i in range(1, 6):
+    sum += i
+print(sum)","# Calculate the sum of the first 5 numbers (optimized)
+print(sum(range(1, 6)))"
+"# Check if a number is positive
+num = 10
+if num > 0:
+    print(""Positive"")","# Check if a number is positive (optimized)
+num = 10
+print(""Positive"" if num > 0 else ""Not Positive"")"
+"# Print the square of numbers from 1 to 5
+for i in range(1, 6):
+    print(i**2)","# Print the square of numbers from 1 to 5 (single-line)
+print([x**2 for x in range(1, 6)])"
+"# Find the largest number in a list
+numbers = [3, 1, 4, 1, 5]
+max_num = max(numbers)
+print(max_num)","# Find the largest number in a list (optimized)
+print(max([3, 1, 4, 1, 5]))"
+"# Check if a string contains another string
+if ""hello"" in ""hello world"":
+    print(""Found"")","# Check if a string contains another string (optimized)
+print(""Found"" if ""hello"" in ""hello world"" else ""Not Found"")"
+"# Reverse a string
+text = ""hello""
+reversed_text = text[::-1]
+print(reversed_text)","# Reverse a string (simplified)
+print(""hello""[::-1])"
+"# Sort a list in ascending order
+numbers = [5, 2, 9, 1]
+numbers.sort()
+print(numbers)","# Sort a list in ascending order (simplified)
+print(sorted([5, 2, 9, 1]))"
+"# Count the occurrences of an element in a list
+numbers = [1, 2, 2, 3]
+count = numbers.count(2)
+print(count)","# Count the occurrences of an element in a list (simplified)
+print([1, 2, 2, 3].count(2))"
+"# Convert a list of strings to uppercase
+words = [""hello"", ""world""]
+uppercase_words = [word.upper() for word in words]
+print(uppercase_words)","# Convert a list of strings to uppercase (optimized)
+print([word.upper() for word in [""hello"", ""world""]])"
+"# Calculate the factorial of a number
+n = 5
+factorial = 1
+for i in range(1, n + 1):
+    factorial *= i
+print(factorial)","# Calculate the factorial of a number (using math.factorial)
+import math
+print(math.factorial(5))"
+"# Check if a number is even
+num = 4
+if num % 2 == 0:
+    print(""Even"")","# Check if a number is even (optimized)
+num = 4
+print(""Even"" if num % 2 == 0 else ""Odd"")"
+"# Find the length of a string
+string = ""hello""
+length = len(string)
+print(length)","# Find the length of a string (optimized)
+print(len(""hello""))"
+"# Create a list of numbers from 1 to 10
+numbers = []
+for i in range(1, 11):
+    numbers.append(i)
+print(numbers)","# Create a list of numbers from 1 to 10 (simplified)
+print(list(range(1, 11)))"
+"# Filter even numbers from a list
+numbers = [1, 2, 3, 4, 5]
+evens = []
+for num in numbers:
+    if num % 2 == 0:
+        evens.append(num)
+print(evens)","# Filter even numbers from a list (using list comprehension)
+print([num for num in [1, 2, 3, 4, 5] if num % 2 == 0])"
+"# Concatenate two strings
+str1 = ""hello ""
+str2 = ""world""
+result = str1 + str2
+print(result)","# Concatenate two strings (optimized)
+print(""hello "" + ""world"")"
+"# Check if a list is empty
+my_list = []
+if len(my_list) == 0:
+    print(""Empty"")","# Check if a list is empty (concise)
+my_list = []
+print(""Empty"" if not my_list else ""Not Empty"")"
+"# Multiply all elements in a list
+numbers = [1, 2, 3]
+result = 1
+for num in numbers:
+    result *= num
+print(result)","# Multiply all elements in a list (using math.prod)
+import math
+print(math.prod([1, 2, 3]))"
+"# Convert a string to lowercase
+text = ""HELLO""
+lowercase_text = text.lower()
+print(lowercase_text)","# Convert a string to lowercase (optimized)
+print(""HELLO"".lower())"
+"# Find the minimum number in a list
+numbers = [4, 2, 8]
+min_num = min(numbers)
+print(min_num)","# Find the minimum number in a list (optimized)
+print(min([4, 2, 8]))"
+"# Find the index of an element in a list
+numbers = [10, 20, 30]
+index = numbers.index(20)
+print(index)","# Find the index of an element in a list (optimized)
+print([10, 20, 30].index(20))"
+"# Find the sum of numbers from 1 to 10
+sum = 0
+for i in range(1, 11):
+    sum += i
+print(sum)","# Optimized version using built-in functions
+print(sum(range(1, 11)))"
+"# Reverse a string
+string = ""hello""
+reversed_string = """"
+for char in string:
+    reversed_string = char + reversed_string
+print(reversed_string)","# Optimized version using slicing
+print(""hello""[::-1])"
+"# Count even numbers in a list
+numbers = [1, 2, 3, 4, 5, 6]
+evens = []
+for num in numbers:
+    if num % 2 == 0:
+        evens.append(num)
+print(evens)","# Optimized version using list comprehension
+print([num for num in [1, 2, 3, 4, 5, 6] if num % 2 == 0])"
+"# Find the length of a string
+string = ""hello""
+count = 0
+for char in string:
+    count += 1
+print(count)","# Optimized version using len()
+print(len(""hello""))"
+"# Check if a number is prime
+num = 29
+is_prime = True
+for i in range(2, num):
+    if num % i == 0:
+        is_prime = False
+        break
+print(is_prime)","# Optimized version using sqrt and range step
+from math import sqrt
+num = 29
+print(all(num % i != 0 for i in range(2, int(sqrt(num)) + 1)))"
+"# Calculate factorial of a number
+num = 5
+factorial = 1
+for i in range(1, num + 1):
+    factorial *= i
+print(factorial)","# Optimized version using math.factorial
+from math import factorial
+print(factorial(5))"
+"# Find unique elements in a list
+numbers = [1, 2, 2, 3, 4, 4, 5]
+unique_numbers = []
+for num in numbers:
+    if num not in unique_numbers:
+        unique_numbers.append(num)
+print(unique_numbers)","# Optimized version using set
+print(list(set([1, 2, 2, 3, 4, 4, 5])))"
+"# Sort a list of numbers
+numbers = [5, 2, 9, 1, 5, 6]
+for i in range(len(numbers)):
+    for j in range(i + 1, len(numbers)):
+        if numbers[i] > numbers[j]:
+            numbers[i], numbers[j] = numbers[j], numbers[i]
+print(numbers)","# Optimized version using sorted()
+print(sorted([5, 2, 9, 1, 5, 6]))"
+"# Count occurrences of an element in a list
+numbers = [1, 2, 2, 3, 4, 2, 5]
+count = 0
+for num in numbers:
+    if num == 2:
+        count += 1
+print(count)","# Optimized version using list.count()
+print([1, 2, 2, 3, 4, 2, 5].count(2))"
+"# Find the maximum value in a list
+numbers = [1, 3, 2, 8, 5, 6]
+max_value = numbers[0]
+for num in numbers:
+    if num > max_value:
+        max_value = num
+print(max_value)","# Optimized version using max()
+print(max([1, 3, 2, 8, 5, 6]))"
+"# Find all odd numbers in a list
+numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+odds = []
+for num in numbers:
+    if num % 2 != 0:
+        odds.append(num)
+print(odds)","# Optimized version using list comprehension
+numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+print([num for num in numbers if num % 2 != 0])"
+"# Concatenate strings in a list
+words = [""hello"", ""world"", ""python""]
+sentence = """"
+for word in words:
+    sentence += word + "" ""
+sentence = sentence.strip()
+print(sentence)","# Optimized version using join
+words = [""hello"", ""world"", ""python""]
+print("" "".join(words))"
+"# Remove duplicates from a list
+numbers = [1, 2, 2, 3, 4, 4, 5]
+unique_numbers = []
+for num in numbers:
+    if num not in unique_numbers:
+        unique_numbers.append(num)
+print(unique_numbers)","# Optimized version using set
+numbers = [1, 2, 2, 3, 4, 4, 5]
+print(list(set(numbers)))"
+"# Generate a list of squares from 1 to 10
+squares = []
+for i in range(1, 11):
+    squares.append(i ** 2)
+print(squares)","# Optimized version using list comprehension
+print([i ** 2 for i in range(1, 11)])"
+"# Count the frequency of each character in a string
+text = ""hello world""
+frequency = {}
+for char in text:
+    if char in frequency:
+        frequency[char] += 1
+    else:
+        frequency[char] = 1
+print(frequency)","# Optimized version using collections.Counter
+from collections import Counter
+text = ""hello world""
+print(Counter(text))"
+"# Find the smallest number in a list
+numbers = [3, 1, 4, 1, 5, 9]
+smallest = numbers[0]
+for num in numbers:
+    if num < smallest:
+        smallest = num
+print(smallest)","# Optimized version using min
+numbers = [3, 1, 4, 1, 5, 9]
+print(min(numbers))"
+"# Filter words longer than 3 characters
+words = [""cat"", ""elephant"", ""dog"", ""fish""]
+long_words = []
+for word in words:
+    if len(word) > 3:
+        long_words.append(word)
+print(long_words)","# Optimized version using list comprehension
+words = [""cat"", ""elephant"", ""dog"", ""fish""]
+print([word for word in words if len(word) > 3])"
+"# Calculate the sum of digits in a number
+number = 12345
+sum_of_digits = 0
+for digit in str(number):
+    sum_of_digits += int(digit)
+print(sum_of_digits)","# Optimized version using sum and map
+number = 12345
+print(sum(map(int, str(number))))"
+"# Find all prime numbers up to 20
+primes = []
+for num in range(2, 21):
+    is_prime = True
+    for i in range(2, num):
+        if num % i == 0:
+            is_prime = False
+            break
+    if is_prime:
+        primes.append(num)
+print(primes)","# Optimized version using a function and list comprehension
+def is_prime(n):
+    return all(n % i != 0 for i in range(2, int(n ** 0.5) + 1))
+
+print([num for num in range(2, 21) if is_prime(num)])"
+"# Merge two dictionaries
+dict1 = {""a"": 1, ""b"": 2}
+dict2 = {""b"": 3, ""c"": 4}
+merged_dict = dict1.copy()
+for key, value in dict2.items():
+    merged_dict[key] = value
+print(merged_dict)","# Optimized version using dictionary unpacking
+dict1 = {""a"": 1, ""b"": 2}
+dict2 = {""b"": 3, ""c"": 4}
+print({**dict1, **dict2})"
+"# Find the intersection of two lists
+list1 = [1, 2, 3, 4]
+list2 = [3, 4, 5, 6]
+intersection = []
+for item in list1:
+    if item in list2:
+        intersection.append(item)
+print(intersection)","# Optimized version using set intersection
+list1 = [1, 2, 3, 4]
+list2 = [3, 4, 5, 6]
+print(list(set(list1) & set(list2)))"
+"# Flatten a nested list
+nested_list = [[1, 2], [3, 4], [5, 6]]
+flat_list = []
+for sublist in nested_list:
+    for item in sublist:
+        flat_list.append(item)
+print(flat_list)","# Optimized version using list comprehension
+nested_list = [[1, 2], [3, 4], [5, 6]]
+print([item for sublist in nested_list for item in sublist])"
+"# Check if all elements in a list are positive
+numbers = [1, 2, 3, -4, 5]
+all_positive = True
+for num in numbers:
+    if num <= 0:
+        all_positive = False
+        break
+print(all_positive)","# Optimized version using all()
+numbers = [1, 2, 3, -4, 5]
+print(all(num > 0 for num in numbers))"
+"# Transpose a matrix
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+transpose = []
+for i in range(len(matrix[0])):
+    row = []
+    for j in range(len(matrix)):
+        row.append(matrix[j][i])
+    transpose.append(row)
+print(transpose)","# Optimized version using zip()
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+print([list(row) for row in zip(*matrix)])"
+"# Count words in a sentence
+sentence = ""this is a test this is only a test""
+words = sentence.split()
+word_count = {}
+for word in words:
+    if word in word_count:
+        word_count[word] += 1
+    else:
+        word_count[word] = 1
+print(word_count)","# Optimized version using collections.Counter
+from collections import Counter
+sentence = ""this is a test this is only a test""
+print(Counter(sentence.split()))"
+"# Find common characters in two strings
+string1 = ""hello""
+string2 = ""world""
+common_chars = []
+for char in string1:
+    if char in string2 and char not in common_chars:
+        common_chars.append(char)
+print(common_chars)","# Optimized version using set intersection
+string1 = ""hello""
+string2 = ""world""
+print(list(set(string1) & set(string2)))"
+"# Generate Fibonacci sequence up to n terms
+n = 10
+fib_sequence = [0, 1]
+for i in range(2, n):
+    fib_sequence.append(fib_sequence[-1] + fib_sequence[-2])
+print(fib_sequence)","# Optimized version using a generator
+def fibonacci(n):
+    a, b = 0, 1
+    for _ in range(n):
+        yield a
+        a, b = b, a + b
+
+print(list(fibonacci(10)))"
+"# Find the GCD of two numbers
+a, b = 48, 18
+while b != 0:
+    temp = b
+    b = a % b
+    a = temp
+print(a)","# Optimized version using math.gcd
+from math import gcd
+a, b = 48, 18
+print(gcd(a, b))"
+"# Remove whitespace from a string
+text = ""  hello world  ""
+result = """"
+for char in text:
+    if char != "" "":
+        result += char
+print(result)","# Optimized version using str.replace()
+text = ""  hello world  ""
+print(text.replace("" "", """"))"
+"# Check if a number is a perfect square
+num = 16
+is_square = False
+for i in range(1, num + 1):
+    if i * i == num:
+        is_square = True
+        break
+print(is_square)","# Optimized version using math.sqrt
+from math import sqrt
+num = 16
+print(sqrt(num).is_integer())"
+"# Find the average of a list of numbers
+numbers = [10, 20, 30, 40, 50]
+total = 0
+for num in numbers:
+    total += num
+average = total / len(numbers)
+print(average)","# Optimized version using sum()
+numbers = [10, 20, 30, 40, 50]
+print(sum(numbers) / len(numbers))"
+"# Reverse the words in a sentence
+sentence = ""hello world""
+words = sentence.split()
+reversed_sentence = """"
+for word in reversed(words):
+    reversed_sentence += word + "" ""
+reversed_sentence = reversed_sentence.strip()
+print(reversed_sentence)","# Optimized version using join() and reversed()
+sentence = ""hello world""
+print("" "".join(reversed(sentence.split())))"
+"# Find all numbers divisible by 3 from a list
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+divisible_by_3 = []
+for num in numbers:
+    if num % 3 == 0:
+        divisible_by_3.append(num)
+print(divisible_by_3)","# Optimized version using list comprehension
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+print([num for num in numbers if num % 3 == 0])"
+"# Calculate the product of all numbers in a list
+numbers = [1, 2, 3, 4]
+product = 1
+for num in numbers:
+    product *= num
+print(product)","# Optimized version using math.prod
+from math import prod
+numbers = [1, 2, 3, 4]
+print(prod(numbers))"
+"# Find the longest word in a list
+words = [""cat"", ""elephant"", ""tiger"", ""hippopotamus""]
+longest_word = words[0]
+for word in words:
+    if len(word) > len(longest_word):
+        longest_word = word
+print(longest_word)","# Optimized version using max()
+words = [""cat"", ""elephant"", ""tiger"", ""hippopotamus""]
+print(max(words, key=len))"
+"# Remove vowels from a string
+text = ""hello world""
+result = """"
+for char in text:
+    if char not in ""aeiouAEIOU"":
+        result += char
+print(result)","# Optimized version using list comprehension
+text = ""hello world""
+print("""".join([char for char in text if char not in ""aeiouAEIOU""]))"
+"# Check if two strings are anagrams
+str1 = ""listen""
+str2 = ""silent""
+sorted_str1 = sorted(str1)
+sorted_str2 = sorted(str2)
+if sorted_str1 == sorted_str2:
+    print(True)
+else:
+    print(False)","# Optimized version using sorted() directly
+str1 = ""listen""
+str2 = ""silent""
+print(sorted(str1) == sorted(str2))"
+"# Capitalize the first letter of each word in a string
+sentence = ""hello world""
+words = sentence.split()
+capitalized_sentence = """"
+for word in words:
+    capitalized_sentence += word.capitalize() + "" ""
+capitalized_sentence = capitalized_sentence.strip()
+print(capitalized_sentence)","# Optimized version using str.title()
+sentence = ""hello world""
+print(sentence.title())"
+"# Find the second largest number in a list
+numbers = [10, 20, 4, 45, 99]
+largest = second_largest = float('-inf')
+for num in numbers:
+    if num > largest:
+        second_largest = largest
+        largest = num
+    elif num > second_largest and num != largest:
+        second_largest = num
+print(second_largest)","# Optimized version using sorted()
+numbers = [10, 20, 4, 45, 99]
+print(sorted(set(numbers))[-2])"
+"# Calculate the cumulative sum of a list
+numbers = [1, 2, 3, 4]
+cumulative_sum = []
+current_sum = 0
+for num in numbers:
+    current_sum += num
+    cumulative_sum.append(current_sum)
+print(cumulative_sum)","# Optimized version using itertools.accumulate
+from itertools import accumulate
+numbers = [1, 2, 3, 4]
+print(list(accumulate(numbers)))"
+"# Convert a list of integers to a single integer
+numbers = [1, 2, 3, 4]
+result = """"
+for num in numbers:
+    result += str(num)
+result = int(result)
+print(result)","# Optimized version using join()
+numbers = [1, 2, 3, 4]
+print(int("""".join(map(str, numbers))))"
+"# Check if all elements in a list are unique
+numbers = [1, 2, 3, 4, 5]
+unique = True
+for i in range(len(numbers)):
+    for j in range(i + 1, len(numbers)):
+        if numbers[i] == numbers[j]:
+            unique = False
+            break
+print(unique)","# Optimized version using set
+numbers = [1, 2, 3, 4, 5]
+print(len(numbers) == len(set(numbers)))"
+"# Reverse a dictionary's key-value pairs
+my_dict = {'a': 1, 'b': 2, 'c': 3}
+reversed_dict = {}
+for key, value in my_dict.items():
+    reversed_dict[value] = key
+print(reversed_dict)","# Optimized version using dictionary comprehension
+my_dict = {'a': 1, 'b': 2, 'c': 3}
+print({value: key for key, value in my_dict.items()})"
+"# Find the factorial of a number
+n = 5
+factorial = 1
+for i in range(1, n + 1):
+    factorial *= i
+print(factorial)","# Optimized version using math.factorial
+from math import factorial
+n = 5
+print(factorial(n))"
+"# Filter even numbers from a dictionary's values
+my_dict = {'a': 1, 'b': 2, 'c': 3, 'd': 4}
+even_values = {}
+for key, value in my_dict.items():
+    if value % 2 == 0:
+        even_values[key] = value
+print(even_values)","# Optimized version using dictionary comprehension
+my_dict = {'a': 1, 'b': 2, 'c': 3, 'd': 4}
+print({key: value for key, value in my_dict.items() if value % 2 == 0})"
+"# Create a dictionary from two lists
+keys = ['a', 'b', 'c']
+values = [1, 2, 3]
+my_dict = {}
+for i in range(len(keys)):
+    my_dict[keys[i]] = values[i]
+print(my_dict)","# Optimized version using zip()
+keys = ['a', 'b', 'c']
+values = [1, 2, 3]
+print(dict(zip(keys, values)))"
+"# Replace all occurrences of 'a' with 'o' in a string
+text = ""banana""
+result = """"
+for char in text:
+    if char == 'a':
+        result += 'o'
+    else:
+        result += char
+print(result)","# Optimized version using str.replace()
+text = ""banana""
+print(text.replace('a', 'o'))"
+"# Sort a list of dictionaries by a key
+data = [{'name': 'Alice', 'age': 25}, {'name': 'Bob', 'age': 22}, {'name': 'Charlie', 'age': 30}]
+for i in range(len(data)):
+    for j in range(i + 1, len(data)):
+        if data[i]['age'] > data[j]['age']:
+            data[i], data[j] = data[j], data[i]
+print(data)","# Optimized version using sorted()
+data = [{'name': 'Alice', 'age': 25}, {'name': 'Bob', 'age': 22}, {'name': 'Charlie', 'age': 30}]
+print(sorted(data, key=lambda x: x['age']))"
+"# Create a list of tuples from two lists
+list1 = [1, 2, 3]
+list2 = ['a', 'b', 'c']
+result = []
+for i in range(len(list1)):
+    result.append((list1[i], list2[i]))
+print(result)","# Optimized version using zip()
+list1 = [1, 2, 3]
+list2 = ['a', 'b', 'c']
+print(list(zip(list1, list2)))"
+"# Count how many times a digit appears in a number
+number = 1122334455
+count = 0
+for digit in str(number):
+    if digit == '2':
+        count += 1
+print(count)","# Optimized version using str.count()
+number = 1122334455
+print(str(number).count('2'))"
+"# Convert a string to a list of characters
+text = ""hello""
+characters = []
+for char in text:
+    characters.append(char)
+print(characters)","# Optimized version using list()
+text = ""hello""
+print(list(text))"
+"# Count uppercase letters in a string
+text = ""Hello World""
+count = 0
+for char in text:
+    if char.isupper():
+        count += 1
+print(count)","# Optimized version using sum()
+text = ""Hello World""
+print(sum(1 for char in text if char.isupper()))"
+"# Remove duplicates while maintaining order
+numbers = [1, 2, 2, 3, 4, 3, 5]
+unique_numbers = []
+for num in numbers:
+    if num not in unique_numbers:
+        unique_numbers.append(num)
+print(unique_numbers)","# Optimized version using dict.fromkeys()
+numbers = [1, 2, 2, 3, 4, 3, 5]
+print(list(dict.fromkeys(numbers)))"
+"# Find all palindromic words in a list
+words = [""level"", ""world"", ""radar"", ""python""]
+palindromes = []
+for word in words:
+    if word == word[::-1]:
+        palindromes.append(word)
+print(palindromes)","# Optimized version using list comprehension
+words = [""level"", ""world"", ""radar"", ""python""]
+print([word for word in words if word == word[::-1]])"
+"# Generate a dictionary with squares of numbers
+numbers = [1, 2, 3, 4]
+squares = {}
+for num in numbers:
+    squares[num] = num ** 2
+print(squares)","# Optimized version using dictionary comprehension
+numbers = [1, 2, 3, 4]
+print({num: num ** 2 for num in numbers})"
+"# Find the index of the first occurrence of a value in a list
+numbers = [10, 20, 30, 40, 30]
+index = -1
+for i in range(len(numbers)):
+    if numbers[i] == 30:
+        index = i
+        break
+print(index)","# Optimized version using list.index()
+numbers = [10, 20, 30, 40, 30]
+print(numbers.index(30))"
+"# Split a list into chunks of a given size
+data = [1, 2, 3, 4, 5, 6, 7, 8]
+chunk_size = 3
+chunks = []
+for i in range(0, len(data), chunk_size):
+    chunks.append(data[i:i+chunk_size])
+print(chunks)","# Optimized version using list comprehension
+data = [1, 2, 3, 4, 5, 6, 7, 8]
+chunk_size = 3
+print([data[i:i+chunk_size] for i in range(0, len(data), chunk_size)])"
+"# Reverse a number
+number = 12345
+reversed_number = 0
+while number > 0:
+    reversed_number = reversed_number * 10 + number % 10
+    number //= 10
+print(reversed_number)","# Optimized version using str and int
+number = 12345
+print(int(str(number)[::-1]))"
+"# Check if a string is a valid integer
+text = ""12345""
+is_valid = True
+for char in text:
+    if not char.isdigit():
+        is_valid = False
+        break
+print(is_valid)","# Optimized version using str.isdigit()
+text = ""12345""
+print(text.isdigit())"
+"# Replace all spaces with underscores in a string
+sentence = ""hello world python""
+new_sentence = """"
+for char in sentence:
+    if char == "" "":
+        new_sentence += ""_""
+    else:
+        new_sentence += char
+print(new_sentence)","# Optimized version using str.replace()
+sentence = ""hello world python""
+print(sentence.replace("" "", ""_""))"
+"# Find the sum of all odd numbers in a list
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+sum_odd = 0
+for num in numbers:
+    if num % 2 != 0:
+        sum_odd += num
+print(sum_odd)","# Optimized version using sum() and list comprehension
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+print(sum(num for num in numbers if num % 2 != 0))"
+"# Merge two lists and remove duplicates
+list1 = [1, 2, 3]
+list2 = [3, 4, 5]
+merged = list1 + list2
+unique = []
+for item in merged:
+    if item not in unique:
+        unique.append(item)
+print(unique)","# Optimized version using set
+list1 = [1, 2, 3]
+list2 = [3, 4, 5]
+print(list(set(list1 + list2)))"
+"# Find the minimum and maximum values in a list of numbers
+numbers = [10, 20, 30, 40, 50]
+min_val = numbers[0]
+max_val = numbers[0]
+for num in numbers:
+    if num < min_val:
+        min_val = num
+    if num > max_val:
+        max_val = num
+print(min_val, max_val)","# Optimized version using min() and max()
+numbers = [10, 20, 30, 40, 50]
+print(min(numbers), max(numbers))"
+"# Convert a number to binary
+number = 13
+binary = """"
+while number > 0:
+    binary = str(number % 2) + binary
+    number //= 2
+print(binary)","# Optimized version using bin()
+number = 13
+print(bin(number)[2:])"
+"# Check if a number is prime
+num = 11
+is_prime = True
+for i in range(2, num):
+    if num % i == 0:
+        is_prime = False
+        break
+print(is_prime)","# Optimized version using a loop to sqrt(num)
+num = 11
+is_prime = all(num % i != 0 for i in range(2, int(num**0.5) + 1))
+print(is_prime)"
+"# Create a string with asterisks for a given number
+n = 5
+result = """"
+for i in range(n):
+    result += ""*""
+print(result)","# Optimized version using string multiplication
+n = 5
+print(""*"" * n)"
+"# Find common elements between two lists
+list1 = [1, 2, 3, 4]
+list2 = [3, 4, 5, 6]
+common_elements = []
+for item in list1:
+    if item in list2:
+        common_elements.append(item)
+print(common_elements)","# Optimized version using set intersection
+list1 = [1, 2, 3, 4]
+list2 = [3, 4, 5, 6]
+print(list(set(list1) & set(list2)))"
+"# Replace all negative numbers in a list with zero
+numbers = [1, -2, 3, -4, 5]
+for i in range(len(numbers)):
+    if numbers[i] < 0:
+        numbers[i] = 0
+print(numbers)","# Optimized version using list comprehension
+numbers = [1, -2, 3, -4, 5]
+print([0 if num < 0 else num for num in numbers])"
+"# Generate a random password with letters and numbers
+import random
+import string
+password = """"
+for i in range(10):
+    password += random.choice(string.ascii_letters + string.digits)
+print(password)","# Optimized version using random.choices()
+import random
+import string
+print("""".join(random.choices(string.ascii_letters + string.digits, k=10)))"
+"# Create a dictionary with numbers as keys and their squares as values
+numbers = [1, 2, 3, 4]
+squares = {}
+for num in numbers:
+    squares[num] = num ** 2
+print(squares)","# Optimized version using dictionary comprehension
+numbers = [1, 2, 3, 4]
+print({num: num ** 2 for num in numbers})"
+"# Count the number of vowels in a string
+text = ""Hello, world!""
+vowel_count = 0
+for char in text:
+    if char in ""aeiouAEIOU"":
+        vowel_count += 1
+print(vowel_count)","# Optimized version using sum()
+text = ""Hello, world!""
+print(sum(1 for char in text if char in ""aeiouAEIOU""))"
+"# Remove all even numbers from a list
+numbers = [1, 2, 3, 4, 5, 6]
+result = []
+for num in numbers:
+    if num % 2 != 0:
+        result.append(num)
+print(result)","# Optimized version using list comprehension
+numbers = [1, 2, 3, 4, 5, 6]
+print([num for num in numbers if num % 2 != 0])"
+"# Merge two dictionaries
+dict1 = {'a': 1, 'b': 2}
+dict2 = {'b': 3, 'c': 4}
+merged = dict1.copy()
+for key, value in dict2.items():
+    merged[key] = value
+print(merged)","# Optimized version using {**dict1, **dict2}
+dict1 = {'a': 1, 'b': 2}
+dict2 = {'b': 3, 'c': 4}
+print({**dict1, **dict2})"
+"# Find the sum of all multiples of 3 up to 100
+total = 0
+for i in range(3, 101, 3):
+    total += i
+print(total)","# Optimized version using sum() with range()
+print(sum(range(3, 101, 3)))"
+"# Create a list of tuples with each letter in a string and its position
+text = ""apple""
+result = []
+for index, char in enumerate(text):
+    result.append((char, index))
+print(result)","# Optimized version using list comprehension
+text = ""apple""
+print([(char, index) for index, char in enumerate(text)])"
+"# Count how many times each character appears in a string
+text = ""hello world""
+char_count = {}
+for char in text:
+    if char not in char_count:
+        char_count[char] = 1
+    else:
+        char_count[char] += 1
+print(char_count)","# Optimized version using collections.Counter
+from collections import Counter
+text = ""hello world""
+print(dict(Counter(text)))"
+"# Generate a Fibonacci sequence up to a given number
+n = 10
+fib = [0, 1]
+for i in range(2, n):
+    fib.append(fib[i - 1] + fib[i - 2])
+print(fib)","# Optimized version using a generator expression
+n = 10
+fib = [0, 1]
+[fib.append(fib[-1] + fib[-2]) for _ in range(2, n)]
+print(fib)"
+"# Get the middle character of a string
+text = ""python""
+middle = """"
+if len(text) % 2 == 0:
+    middle = text[len(text) // 2 - 1 : len(text) // 2 + 1]
+else:
+    middle = text[len(text) // 2]
+print(middle)","# Optimized version using slicing
+text = ""python""
+print(text[(len(text)-1)//2:len(text)//2+1])"
+"# Find the intersection of two lists
+list1 = [1, 2, 3, 4]
+list2 = [3, 4, 5, 6]
+intersection = []
+for item in list1:
+    if item in list2:
+        intersection.append(item)
+print(intersection)","# Optimized version using set intersection
+list1 = [1, 2, 3, 4]
+list2 = [3, 4, 5, 6]
+print(list(set(list1).intersection(list2)))"
+"# Convert a string to uppercase
+text = ""hello""
+upper_text = """"
+for char in text:
+    upper_text += char.upper()
+print(upper_text)","# Optimized version using str.upper()
+text = ""hello""
+print(text.upper())"
+"# Find the factorial of a number recursively
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+print(factorial(5))","# Optimized version using math.factorial()
+import math
+print(math.factorial(5))"
+"# Generate all combinations of two lists
+list1 = [1, 2]
+list2 = ['a', 'b']
+combinations = []
+for x in list1:
+    for y in list2:
+        combinations.append((x, y))
+print(combinations)","# Optimized version using itertools.product()
+import itertools
+list1 = [1, 2]
+list2 = ['a', 'b']
+print(list(itertools.product(list1, list2)))"
+"# Check if a string is a palindrome
+text = ""racecar""
+is_palindrome = True
+for i in range(len(text)//2):
+    if text[i] != text[len(text)-1-i]:
+        is_palindrome = False
+        break
+print(is_palindrome)","# Optimized version using slicing
+text = ""racecar""
+print(text == text[::-1])"
+"# Count the number of occurrences of a value in a list
+numbers = [1, 2, 3, 1, 1, 4, 5]
+count = 0
+for num in numbers:
+    if num == 1:
+        count += 1
+print(count)","# Optimized version using list.count()
+numbers = [1, 2, 3, 1, 1, 4, 5]
+print(numbers.count(1))"
+"# Flatten a list of lists
+nested = [[1, 2], [3, 4], [5, 6]]
+flattened = []
+for sublist in nested:
+    for item in sublist:
+        flattened.append(item)
+print(flattened)","# Optimized version using itertools.chain()
+import itertools
+nested = [[1, 2], [3, 4], [5, 6]]
+print(list(itertools.chain(*nested)))"
+"# Count the number of digits in a number
+number = 12345
+digit_count = 0
+while number > 0:
+    number //= 10
+    digit_count += 1
+print(digit_count)","# Optimized version using log10
+import math
+number = 12345
+print(math.floor(math.log10(number)) + 1)"
+"# Reverse a list
+numbers = [1, 2, 3, 4, 5]
+reversed_list = []
+for num in range(len(numbers)-1, -1, -1):
+    reversed_list.append(numbers[num])
+print(reversed_list)","# Optimized version using slicing
+numbers = [1, 2, 3, 4, 5]
+print(numbers[::-1])"
+"# Create a dictionary from two lists
+keys = ['name', 'age', 'city']
+values = ['Alice', 30, 'New York']
+result = {}
+for i in range(len(keys)):
+    result[keys[i]] = values[i]
+print(result)","# Optimized version using zip()
+keys = ['name', 'age', 'city']
+values = ['Alice', 30, 'New York']
+print(dict(zip(keys, values)))"
+"# Check if a number is even or odd
+num = 7
+if num % 2 == 0:
+    print(""Even"")
+else:
+    print(""Odd"")","# Optimized version using a ternary operator
+num = 7
+print(""Even"" if num % 2 == 0 else ""Odd"")"
