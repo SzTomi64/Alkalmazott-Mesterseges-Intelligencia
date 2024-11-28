@@ -6,6 +6,8 @@ The model takes small code snipets (3-4 lines of code) with a small description 
 
 In the data.csv file, we find 109 unoptimized-optimized code pairs generated with ChatGPT.
 
-In the notebook, we can find the training algorithm. I used a Llama 3.2 model and finetuned it on my custom dataset.
+In the code optimizer notebook, we can find the training algorithm. I used a Llama 3.2 model and finetuned it on my custom dataset.
+
+In the code_test notebook we can find some of the question-answer pairs tested with a timer.
 
 The training requiers access to the Llama model and wandb authetication.
